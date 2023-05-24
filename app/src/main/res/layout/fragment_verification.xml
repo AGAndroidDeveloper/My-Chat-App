@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#C80E0812"
+
+    tools:context=".ui.fragment.Verification">
+
+    <ScrollView
+        android:id="@+id/userprofile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/content_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            >
+            <RelativeLayout
+                android:id="@+id/shape"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-110dp"
+                android:layout_marginTop="-91dp">
+
+                <ImageView
+                    android:id="@+id/ellipse_3"
+                    android:layout_width="175.33dp"
+                    android:layout_height="175.33dp"
+                    android:layout_marginStart="57.67dp"
+                    android:layout_marginTop="-10dp"
+                    android:contentDescription="@string/ellipse_31"
+                    android:src="@drawable/ellipse_3" />
+
+                <ImageView
+                    android:id="@+id/ellipse_1"
+                    android:layout_width="175.33dp"
+                    android:layout_height="175.33dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="23.83dp"
+                    android:contentDescription="@string/ellipse_11"
+                    android:src="@drawable/ellipse_1" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/page_userprofile_ek1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"
+
+                        android:layout_gravity="center"
+                        android:src="@drawable/man"
+
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/otp_verification"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:layout_gravity="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/get_started_color"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/biryani_semibold"
+                        android:id="@+id/message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/enter_otp_sent_to_919001878234"
+                        android:gravity="center"
+                        android:textColor="@color/get_started_color"
+                        android:padding="5dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="7dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        >
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense"
+                            android:layout_height="wrap_content"
+                            app:errorTextColor="#D50000"
+                            app:boxStrokeColor="#000505"
+
+                            android:elevation="30dp"
+                            android:padding="16dp"
+                            app:boxCollapsedPaddingTop="10dp"
+                            app:boxStrokeWidth="2dp"
+                            app:hintTextColor="#43EF43"
+                            app:boxCornerRadiusBottomStart="20dp"
+                            app:boxCornerRadiusBottomEnd="20dp"
+                            app:boxCornerRadiusTopEnd="20dp"
+                            app:boxCornerRadiusTopStart="20dp"
+                            android:textColor="@color/get_started_color"
+                            >
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/EnterPhoneOtp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:hint="@string/enter_one_time_password"
+                                android:gravity="center"
+                                android:textSize="20sp"
+                                android:inputType="number"
+                                android:textColor="#43EF43"
+
+                                android:fontFamily="@font/biryani_semibold"
+
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/verifyOtp"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="70dp"
+                        android:background="@drawable/name_background1"
+                        android:text="@string/verify"
+
+                        android:shadowColor="@color/os40"
+                        android:textColor="@color/get_started_color"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:textStyle="italic" />
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

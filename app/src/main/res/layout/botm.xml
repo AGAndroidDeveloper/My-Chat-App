@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+
+   android:gravity="center"
+>
+
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        style="@style/ThemeOverlay.Material3.TextInputEditText"
+        android:hint="Type Something here "
+        android:textColorHint="#859A97"
+        android:textColor="#F1D95B"
+        android:paddingStart="10dp"/>
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_weight=".1"
+        android:gravity="center"
+
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_send_24"/>
+
+      <ImageView
+        android:layout_width="0dp"
+        android:layout_weight=".1"
+        android:gravity="center"
+
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_attach_file_24"/>
+
+
+
+</LinearLayout>

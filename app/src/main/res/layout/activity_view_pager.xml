@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawerLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.ViewPager"
+tools:openDrawer="start"
+    android:fitsSystemWindows="true"
+    app:circularflow_radiusInDP="10dp"
+    android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:background="#537188"
+        app:menu="@menu/menu123"
+
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="fixed"
+        app:tabBackground="@drawable/tab_background"
+        app:tabIndicatorHeight="0dp"
+        app:tabTextAppearance="@style/CustomTabTextAppearance"
+        app:tabTextColor="#070A52"
+        app:tabSelectedTextColor="#03001C"
+        android:backgroundTint="#537188"
+        app:tabRippleColor="#5DD811"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UselessLeaf" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layoutDirection="inherit"
+        android:backgroundTint="@color/colorPrimary"
+        tools:ignore="MissingClass" />
+</LinearLayout>
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/profileheader"
+        app:menu="@menu/menu121"
+        android:fitsSystemWindows="true"
+        app:itemShapeInsetStart = "8dp"
+        app:itemIconPadding="10dp"
+
+        app:itemShapeInsetTop = "4dp"
+        app:itemShapeInsetEnd = "8dp"
+        app:itemShapeInsetBottom = "4dp"
+        app:itemHorizontalPadding="22dp"
+        app:itemShapeFillColor="@drawable/colormy"
+        android:background="#F9F5F6"
+        />
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MyChatApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">#537188</item>
+        <item name="colorOnPrimaryContainer">@color/opc</item>
+        <item name="colorPrimaryContainer">@color/primaryContainer</item>
+        <item name="colorPrimarySurface">#F3F4F9</item>
+        <item name="colorSecondary">#2B1C05</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="backgroundColor">#FCFCFF</item>
+
+    </style>
+
+    <style name="Theme.MyChatApp" parent="Base.Theme.MyChatApp" />
+
+    <style name="Theme.MyChatApp.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.MyChatApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.MyChatApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

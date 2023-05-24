@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Selected state -->
+    <item android:state_selected="true">
+        <shape>
+
+
+            <solid android:color="#355D81" />
+        </shape>
+    </item>
+
+    <!-- Default state -->
+    <item
+        android:state_checked="false">
+        <shape>
+
+
+            <!-- Set the background color for the default state -->
+            <solid  android:color="#537188"/>
+        </shape>
+
+    </item>
+
+</selector>

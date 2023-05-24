@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.ankitgupta.dev.mychatapp.ui.fragment.SplashFragment"
+        android:label="Splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_enterNumber"
+            app:destination="@id/enterNumber" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/enterNumber"
+        android:name="com.ankitgupta.dev.mychatapp.ui.fragment.EnterNumber"
+        android:label="fragment_enter_number"
+        tools:layout="@layout/fragment_enter_number" >
+
+        <action
+            android:id="@+id/action_enterNumber_to_verification"
+            app:destination="@id/verification" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/verification"
+        android:name="com.ankitgupta.dev.mychatapp.ui.fragment.Verification"
+        android:label="fragment_verification"
+        tools:layout="@layout/fragment_verification" >
+      <argument
+        android:name="phoneNumber"
+        app:argType="string" />
+    </fragment>
+
+</navigation>

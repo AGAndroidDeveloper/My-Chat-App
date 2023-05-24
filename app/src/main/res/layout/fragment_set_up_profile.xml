@@ -1,0 +1,218 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.SetUpProfile"
+    android:background="@color/white"
+    android:alpha=".85"
+    >
+    <ScrollView
+        android:id="@+id/userprofile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/content_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            >
+
+
+            <LinearLayout
+                android:id="@+id/page_userprofile_ek1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp"
+                tools:ignore="UselessParent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userProfileImage"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                 android:padding="10dp"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/download__12_"
+                    app:civ_border_width="2dp"/>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+
+                    style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense"
+                    android:layout_height="wrap_content"
+                    app:errorTextColor="#D50000"
+                    app:boxStrokeColor="#000505"
+                    android:elevation="40dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    app:boxCollapsedPaddingTop="10dp"
+                    app:boxStrokeWidth="2dp"
+                    app:hintTextColor="#040C04"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+                    android:layout_marginBottom="5dp"
+                    app:errorTextAppearance="@style/TextAppearance.AppCompat.Body1"
+                    app:errorIconDrawable="@drawable/baseline_error_24"
+                    android:textColor="@color/black"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/enterName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:hint=" Name"
+                        android:gravity="start"
+                        android:textSize="20sp"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/black"
+                        android:shadowColor="#80000000"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="4"
+                        android:fontFamily="@font/biryani_semibold"
+
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense"
+                    android:layout_height="wrap_content"
+                    app:errorTextColor="#D50000"
+                    app:boxStrokeColor="#000505"
+                    android:elevation="20dp"
+                    android:padding="5dp"
+                android:layout_marginBottom="5dp"
+                    app:boxCollapsedPaddingTop="10dp"
+                    app:boxStrokeWidth="2dp"
+                    app:hintTextColor="#040C04"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:errorIconDrawable="@drawable/baseline_error_24"
+                    android:textColor="@color/black"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/enterEmailId"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:hint=" Email-Id"
+                        android:gravity="start"
+                        android:textSize="20sp"
+                        android:inputType="textEmailAddress"
+                        android:shadowColor="#80000000"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="4"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/biryani_semibold"
+
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+app:errorIconDrawable="@drawable/baseline_error_24"
+                    style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense"
+                    android:layout_height="wrap_content"
+                    app:errorTextColor="#D50000"
+                    app:boxStrokeColor="#000505"
+                    android:elevation="20dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    app:boxCollapsedPaddingTop="10dp"
+                    app:boxStrokeWidth="2dp"
+                    app:hintTextColor="#040C04"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+
+                    android:textColor="@color/black"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/enterDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:hint="Description"
+                        android:gravity="start"
+
+                        android:textSize="20sp"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:shadowColor="#80000000"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="4"
+                        android:fontFamily="@font/biryani_semibold"
+
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
+                <Button
+                    android:id="@+id/ankitBtnSubmit"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="30dp"
+android:textSize="25sp"
+                    android:elevation="8dp"
+                    android:padding="16dp"
+                    android:text="@string/submit"
+                    android:textColor="#0B050C"
+                    android:layout_gravity="center"
+                    style="@style/Widget.Material3.Button"
+                   android:gravity="center"
+                    android:backgroundTint="#F2BED1"
+
+
+                    />
+
+
+
+
+                <TextView
+                    android:id="@+id/welcome"
+android:textSize="30sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                    android:layout_gravity="center_horizontal|center"
+                    android:gravity="center"
+                    android:layout_marginTop="30dp"
+
+                    android:text="Create Profile"
+
+                    android:textColor="@color/opc"
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

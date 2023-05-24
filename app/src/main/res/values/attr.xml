@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="ccp_showBottomNavigationIcon" format="boolean" />
+    <attr name="ccp_showSpinner" format="boolean" />
+    <attr name="ccp_showFastScroller" format="boolean" />
+    <attr name="ccp_showSearch" format="boolean" />
+
+</resources>

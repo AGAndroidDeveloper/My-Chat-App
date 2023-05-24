@@ -1,0 +1,98 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.SplashFragment"
+    android:background="#292F3F"
+
+    >
+
+    <ScrollView
+        android:id="@+id/userprofile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/content_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            >
+            <RelativeLayout
+                android:id="@+id/shape"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-110dp"
+                android:layout_marginTop="-91dp">
+
+                <ImageView
+                    android:id="@+id/ellipse_3"
+                    android:layout_width="175.33dp"
+                    android:layout_height="175.33dp"
+                    android:layout_marginStart="57.67dp"
+                    android:layout_marginTop="-10dp"
+                    android:contentDescription="ellipse_3"
+                    android:src="@drawable/ellipse_3" />
+
+                <ImageView
+                    android:id="@+id/ellipse_1"
+                    android:layout_width="175.33dp"
+                    android:layout_height="175.33dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="23.83dp"
+                    android:contentDescription="ellipse_1"
+                    android:src="@drawable/ellipse_1" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/page_userprofile_ek1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp"
+                >
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:rotation="13"
+                    android:layout_gravity="center"
+                    android:src="@drawable/undraw_chatting_re_j55r__1_"/>
+
+                <TextView
+                    android:id="@+id/create_profile_Btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="30dp"
+                    android:alpha="0.99000000953674"
+                    android:text="Unlock the Power of Conversations"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+
+                    android:padding="10dp"
+                    android:textColor="#7BCABF"
+                    android:layout_gravity="center"
+
+                    />
+
+
+
+
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

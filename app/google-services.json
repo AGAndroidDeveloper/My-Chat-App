@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1011372777019",
+    "firebase_url": "https://chat-app-15-may2023-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "chat-app-15-may2023",
+    "storage_bucket": "chat-app-15-may2023.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1011372777019:android:ad8f9ea21dca9d6338461e",
+        "android_client_info": {
+          "package_name": "com.ankitgupta.dev.mychatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1011372777019-ihcurio9k8vif5metbrb9rb8o8prbice.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ankitgupta.dev.mychatapp",
+            "certificate_hash": "a3b55708e291baf66c349b0334b8624f79350f45"
+          }
+        },
+        {
+          "client_id": "1011372777019-o6eu15o5gb39v4tifdtja73ieedm4m1n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCs9uM3vSYSd13gbIbmdA1bdVDKUqN17iQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1011372777019-o6eu15o5gb39v4tifdtja73ieedm4m1n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

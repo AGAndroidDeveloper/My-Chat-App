@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/leftShare"
+        android:icon="@drawable/reply_solid"
+        android:title="share"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/star"
+        android:icon="@drawable/baseline_star_24"
+        android:title="share"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/delete"
+        android:icon="@drawable/baseline_delete_24"
+        android:title="delete"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/rightShare"
+        android:icon="@drawable/share_solid"
+        android:title="share"
+        app:showAsAction="always"/>
+
+</menu>
