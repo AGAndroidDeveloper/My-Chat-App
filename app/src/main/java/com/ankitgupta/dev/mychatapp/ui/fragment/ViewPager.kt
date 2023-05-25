@@ -1,6 +1,7 @@
 package com.ankitgupta.dev.mychatapp.ui.fragment
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -80,13 +81,14 @@ profileEmailView = headerView.findViewById(R.id.myEmail)
             val intent = Intent(this,EditProfile::class.java)
             startActivity(intent)
         }
-
+tabLayout!!.setSelectedTabIndicatorColor(Color.parseColor("#5DD811"))
 fetchCurrentUserProfileData()
 
         viewPager!!.adapter = adapter
         viewPager!!.background = ContextCompat.getDrawable(this, R.color.primaryContainer)
         TabLayoutMediator(tabLayout!!, viewPager!!) { tab, position ->
             tab.text = a[position]
+
         }.attach()
         profileList = arrayListOf()
     }

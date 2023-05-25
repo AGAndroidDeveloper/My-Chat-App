@@ -3,9 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:circularflow_radiusInDP="10dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#111D3A"
+android:background="#DDE6ED"
     tools:context=".ui.fragment.EnterNumber">
 
 
@@ -15,163 +16,132 @@
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+android:paddingTop="100dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:id="@+id/content_container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingBottom="10dp"
-            >
-            <RelativeLayout
-                android:id="@+id/shape"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="-110dp"
-                android:layout_marginTop="-91dp">
-
-                <ImageView
-                    android:id="@+id/ellipse_3"
-                    android:layout_width="175.33dp"
-                    android:layout_height="175.33dp"
-                    android:layout_marginStart="57.67dp"
-                    android:layout_marginTop="-10dp"
-                    android:contentDescription="@string/ellipse_3"
-                    android:src="@drawable/ellipse_3" />
-
-                <ImageView
-                    android:id="@+id/ellipse_1"
-                    android:layout_width="175.33dp"
-                    android:layout_height="175.33dp"
-                    android:layout_marginStart="25dp"
-                    android:layout_marginTop="23.83dp"
-                    android:contentDescription="@string/ellipse_1"
-                    android:src="@drawable/ellipse_1" />
 
 
-            </RelativeLayout>
 
-            <LinearLayout
-                android:id="@+id/page_userprofile_ek1"
+
+
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="16dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="25dp"
+                app:cardBackgroundColor="#F1F5F6"
+                android:layout_marginBottom="10dp"
+                android:elevation="8dp"
+
+                android:layout_margin="5dp"
+                app:cardElevation="5dp"
+
                 >
-
-
-                <com.google.android.material.card.MaterialCardView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="25dp"
-                    app:cardBackgroundColor="#A3C6CC"
-                    app:cardUseCompatPadding="true"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/otp_verification11"
+                        android:gravity="center"
+                        android:padding="5dp"
+
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/biryani_semibold"
+                        android:id="@+id/message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/we_will_send_you_one_time_password_on_this_number"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        android:layout_gravity="center"
+                        />
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text=" Otp Verification"
-                            android:gravity="center"
-                            android:padding="5dp"
+                     android:gravity="center"
+                        android:layout_marginTop="20dp"
+                        >
 
-                            android:textSize="20sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
-                        <TextView
+                        <com.hbb20.CountryCodePicker
+                            app:ccp_defaultNameCode="IND"
+                            android:id="@+id/country_code"
                             android:layout_marginTop="10dp"
-                            android:fontFamily="@font/biryani_semibold"
-                            android:id="@+id/message"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="We Will Send You  One Time PassWord to this Number"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:textSize="16sp"
-                            android:textStyle="normal"
-                            android:layout_gravity="center"
-                            />
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="5dp"
-                            android:layout_marginTop="20dp"
-                            >
-
-                            <com.hbb20.CountryCodePicker
-                                app:ccp_defaultNameCode="IND"
-                                android:id="@+id/country_code"
-                                android:layout_marginTop="10dp"
-                                android:layout_width="0dp"
-                                android:layout_weight="1"
-                                app:ccp_showFlag="true"
-                                app:ccp_showNameCode="false"
-                                app:ccp_showFullName="false"
-                                app:ccp_showPhoneCode="false"
-                                app:ccp_showSpinner="false"
-                                app:ccp_showFastScroller="false"
-                                app:ccp_showSearch="false"
-                                app:ccp_showBottomNavigationIcon="true"
-                                android:layout_height="wrap_content">
-                            </com.hbb20.CountryCodePicker>
+                    android:layout_gravity="top"
+                            app:ccp_showFlag="true"
+                            app:ccp_showNameCode="false"
+                            app:ccp_showFullName="false"
+                            app:ccp_showPhoneCode="false"
+                            app:ccp_showSpinner="false"
+                            app:ccp_showFastScroller="false"
+                            app:ccp_showSearch="false"
+                            android:layout_marginEnd="10dp"
+                            app:ccp_showBottomNavigationIcon="true"
+                            android:layout_height="wrap_content">
+                        </com.hbb20.CountryCodePicker>
 
 
-                            <com.google.android.material.textfield.TextInputLayout
-                                android:layout_width="0dp"
-                                android:layout_weight="4"
-                                style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/enter_phone_number">
-
-                                <EditText
-                                    android:id="@+id/ankit"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:inputType="number"
-                                    android:backgroundTint="#47EA4F"
-                                    android:autofillHints="number"
-                                    tools:ignore="LabelFor" />
-                            </com.google.android.material.textfield.TextInputLayout>
-
-                        </LinearLayout>
-
-
-                        <androidx.appcompat.widget.AppCompatButton
-                            android:id="@+id/sendOtp"
+                        <com.google.android.material.textfield.TextInputLayout
                             android:layout_width="300dp"
+                       android:layout_gravity="center"
+                            android:gravity="center"
+                            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="70dp"
-                            android:background="@drawable/name_background1"
+                            android:hint="@string/enter_phone_number">
 
-                            android:text="@string/genrate_otp"
-                            android:textColor="#EEEEEE"
-                            android:textSize="20sp"
-                            android:layout_marginBottom="70dp"
-                            android:textStyle="italic" />
-
-
+                            <EditText
+                                android:id="@+id/ankit"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:inputType="number"
+                                android:backgroundTint="#47EA4F"
+                                android:autofillHints="number"
+                                tools:ignore="LabelFor" />
+                        </com.google.android.material.textfield.TextInputLayout>
 
                     </LinearLayout>
 
 
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/sendOtp"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="70dp"
+                        android:background="@drawable/name_background1"
+
+                        android:text="@string/genrate_otp"
+                        android:textColor="#EEEEEE"
+                        android:textSize="20sp"
+                        android:layout_marginBottom="70dp"
+                        android:textStyle="italic" />
 
 
-                </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
 
 
 
 
-            </LinearLayout>
-        </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
 
     </ScrollView>
 
