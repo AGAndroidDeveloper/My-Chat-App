@@ -33,6 +33,9 @@
         android:theme="@style/Theme.MyChatApp"
         tools:targetApi="31">
         <activity
+            android:name=".ui.fragment.ChatActivityWithUser"
+            android:exported="false" />
+        <activity
             android:name=".ui.fragment.ProfileNew"
             android:exported="false" />
         <activity

@@ -34,6 +34,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import java.util.Calendar
+import java.util.Date
 
 
 class ChatWithFriend : AppCompatActivity() {
@@ -56,22 +57,19 @@ private  var status1 :TextView? = null
         binding = ActivityChatWithFriendBinding.inflate(layoutInflater)
         setContentView(binding?.root)
         db = FirebaseDatabase.getInstance()
-
         setSupportActionBar(binding?.toolbar)
         val customView: View = layoutInflater.inflate(R.layout.toolbar_layout, binding?.toolbar, false)
 
 
-// Set the custom view in the toolbar
 
-// Set the custom view in the toolbar
       binding?.toolbar!!.addView(customView)
-//        toolbar.setDisplayShowCustomEnabled(true)
+
 status1 = customView.findViewById(R.id.status)
-       // fetchStatusData(status)
+
         customView.findViewById<ImageView>(R.id.backNavigation).setOnClickListener {
             onBackPressed()
         }
-    // var userName =    customView.findViewById<TextView>(R.id.userName).text
+
 
         senderId = FirebaseAuth.getInstance().currentUser!!.uid
         messageList = arrayListOf()
@@ -98,7 +96,7 @@ status1 = customView.findViewById(R.id.status)
             receiverId = intent.getStringExtra("uid")
             //Log.e("reId", receiverId!!)
 fetchStatusData(receiverId)
-
+        val date = Date()
         val now: Calendar = Calendar.getInstance()
 
         val hour: Int = now.get(Calendar.HOUR_OF_DAY)
@@ -108,10 +106,10 @@ fetchStatusData(receiverId)
         receiverRoom = receiverId + senderId
         senderRoom = senderId + receiverId
         fetchDataFromDataBase(senderRoom!!)
-   val a : Long = "$hour".toLong()
+   val a : Date = date
         binding?.send!!.setOnClickListener {
             val message = binding?.inputMessage!!.text.toString()
-            val messageObj = Message(senderId, message, a)
+            val messageObj = Message(senderId, message, System.currentTimeMillis().toString())
             if (message.isNotEmpty()) {
                 addToFireBase(messageObj, senderRoom!!, receiverRoom)
                 binding?.inputMessage!!.text!!.clear()
@@ -128,6 +126,7 @@ fetchStatusData(receiverId)
             .child("message")
         Log.e("reObj", messagesRef.toString())
         messagesRef.addValueEventListener(object : ValueEventListener {
+            @SuppressLint("DefaultLocale", "SimpleDateFormat")
             override fun onDataChange(snapshot: DataSnapshot) {
                 messageList!!.clear()
                 val newMessageList = mutableListOf<Message>() // Create a new list to store the updated messages
@@ -137,14 +136,17 @@ fetchStatusData(receiverId)
                     val a = message?.content
                     val b = message?.senderId
                     val c = message?.timestamp
-                    val obj = c?.let { Message(b,a, it) }
-                 //   Log.e("obj","$obj")
+                    val obj = c?.let { Message(b,a, it.toString()) }
+
+                   
+
+                    Log.e("time","$c")
                     if (obj != null) {
                         newMessageList.add(obj) // Add the message to the new list
 //                        Log.e("asdwe", newMessageList.toString())
 //                        Log.e("obj","4$obj")
 //                        Log.e("message", message.toString())
-                        message?.content?.let { Log.e("a", it) }
+                        message.content?.let { Log.e("a", it) }
                        // Log.e("b","${message!!.senderId}")
                         message.content?.let { Log.e("asd", it) }
                     }

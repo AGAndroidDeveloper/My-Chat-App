@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- rectangle_1 from your XD file. -->
+<!-- line_4 from your XD file. -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
 	android:shape="rectangle" >
-	<corners android:radius="20dp" />
-	<solid android:color="@color/rectangle_1_color" />
+	<solid android:color="@color/line_2_color" />
 </shape>
 

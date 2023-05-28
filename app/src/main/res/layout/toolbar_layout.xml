@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#292F3F">
+    android:background="#05CFF8">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,16 +42,17 @@
             <TextView
                 android:id="@+id/userName"
                 tools:text="Ankit Gupta"
+                android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/primaryContainer" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/status"
                 tools:text="Online"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/primaryContainer" />
+                android:textColor="@color/black" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

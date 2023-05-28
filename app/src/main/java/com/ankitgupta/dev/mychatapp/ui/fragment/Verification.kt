@@ -130,7 +130,7 @@ class Verification : Fragment() {
                     Log.d("signIn", "signInWithCredential:success")
                   //  val action  = VerificationDirections.actionVerificationToSetUpProfile(phoneNumber)
                 //  findNavController().navigate(action)
-                    val intent = Intent(context, ProfileNew::class.java)
+                    val intent = Intent(context, ChatActivityWithUser::class.java)
                     intent.putExtra(NUMBER,phoneNumber)
                     startActivity(intent)
                    // (context as Activity).finish()

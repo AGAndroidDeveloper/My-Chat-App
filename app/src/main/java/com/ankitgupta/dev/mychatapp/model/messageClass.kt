@@ -10,10 +10,10 @@ class Message {
         // Default constructor required for Firebase Realtime Database
     }
 
-    constructor(senderId: String?, content: String?, timestamp: Long) {
+    constructor(senderId: String?, content: String?, timestamp: String) {
         this.senderId = senderId
         this.content = content
-        this.timestamp = timestamp
+        this.timestamp = timestamp.toLong()
     }
     override fun toString(): String {
         return "senderId=$senderId, content=$content, timestamp=$timestamp"

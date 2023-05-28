@@ -5,10 +5,13 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.util.Log
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.core.net.toUri
 import androidx.recyclerview.widget.RecyclerView
-import com.ankitgupta.dev.mychatapp.databinding.ConntactProfileBinding
+import com.ankitgupta.dev.mychatapp.R
 import com.ankitgupta.dev.mychatapp.model.Message
 import com.ankitgupta.dev.mychatapp.model.UserModel
 import com.ankitgupta.dev.mychatapp.ui.fragment.ChatWithFriend
@@ -31,16 +34,16 @@ class ContactListAdapter(
     private var db  = FirebaseDatabase.getInstance()
 
 
-    class ContactViewHolder(binding: ConntactProfileBinding) :RecyclerView.ViewHolder(binding.root) {
-        val profileImg = binding.profileImage
-        val phnNomber = binding.phoneNumber
-        val name = binding.Name
+    class ContactViewHolder(view:View) :RecyclerView.ViewHolder(view) {
+        val profileImg :ImageView = view.findViewById(R.id.profileImage)
+        val phnNomber: TextView = view.findViewById<TextView>(R.id.phoneNumber)
+        val name = view.findViewById<TextView>(R.id.Name)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val binding = ConntactProfileBinding.inflate(inflater, parent, false)
-        return ContactViewHolder(binding)
+        val view = inflater.inflate(R.layout.user_profle, parent, false)
+        return ContactViewHolder(view)
     }
 
     override fun getItemCount(): Int {

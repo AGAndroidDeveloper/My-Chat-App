@@ -1,7 +1,12 @@
+
 import android.content.Context
-import android.graphics.Color
 import android.util.Log
-import android.view.*
+import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
+import android.view.View
+import android.view.ViewGroup
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.view.ActionMode
@@ -13,7 +18,7 @@ import com.ankitgupta.dev.mychatapp.databinding.RecieveMessageBinding
 import com.ankitgupta.dev.mychatapp.databinding.SendMessageBinding
 import com.ankitgupta.dev.mychatapp.model.Message
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.FirebaseDatabase
+import java.text.SimpleDateFormat
 
 class ChatAdapter(
     private val context: Context,
@@ -28,10 +33,13 @@ class ChatAdapter(
 
     inner class SentMessageViewHolder(binding: SendMessageBinding) : RecyclerView.ViewHolder(binding.root) {
         val sendMessage: TextView = binding.sendMessage
+        val time :TextView = binding.timeFormat
     }
 
     inner class ReceivedMessageViewHolder(binding: RecieveMessageBinding) : RecyclerView.ViewHolder(binding.root) {
         val receiveMessage: TextView = binding.recieveMessage
+        val time11 :TextView = binding.time1
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -46,11 +54,18 @@ class ChatAdapter(
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        val formatTime = SimpleDateFormat("hh:mm aa")
+
+       // Log.e("tds","$date")
         val data = list[position]
         if (holder is SentMessageViewHolder) {
             holder.sendMessage.text = data.content
+            val date1 = formatTime.format(data.timestamp)
+            holder.time.text = date1
         } else if (holder is ReceivedMessageViewHolder) {
             holder.receiveMessage.text = data.content
+            val date = formatTime.format(data.timestamp)
+        holder.time11.text  = date
         }
 
         holder.itemView.setOnLongClickListener { view ->

@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+<color name="primary">#1B72C0</color>
+    <color name="primaryContainer">#D3E4FF</color>
+    <color name="opc">#001C38</color>
+    <color name="os20">#001E2F</color>
+    <color name="os40">#44474E</color>
+    <color name="os60">#74777F</color>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
@@ -10,16 +15,21 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-<color name="primary">#1B72C0</color>
-    <color name="primaryContainer">#D3E4FF</color>
-    <color name="opc">#001C38</color>
-    <color name="os20">#001E2F</color>
-    <color name="os40">#44474E</color>
-    <color name="os60">#74777F</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
 
+    <color name="_bg__android_large___2_ek2_color">#090000</color>
+    <color name="rectangle_12_color">#043BF9</color>
+    <color name="ha_bro_kya_haal_h_kya_kr_rha_ha_color">#FFFFFF</color>
+    <color name="rectangle_1_color">#D100F3</color>
+    <color name="ellipse_2_color">#0A0000</color>
+    <color name="line_1_color">#30EEA9</color>
+    <color name="line_2_color">#0DFF7C</color>
+    <color name="rectangle_14_color">#AE1C9F</color>
+    <color name="rectangle_16_color">#0A0303</color>
 
     <color name="_bg__userprofile_ek2_color">#FFFFFF</color>
-    <color name="rectangle_1_color">#256B34</color>
+
     <color name="get_started_color">#EEF5F4</color>
     <color name="welcome_color">#0D0000</color>
     <color name="enter_phone_number_color">#000000</color>

@@ -2,13 +2,19 @@ package com.ankitgupta.dev.mychatapp.ui.fragment
 
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.net.toUri
+import com.ankitgupta.dev.mychatapp.R
 import com.ankitgupta.dev.mychatapp.databinding.ActivityEditProfileBinding
 import com.ankitgupta.dev.mychatapp.model.UserModel
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.request.RequestOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -44,6 +50,8 @@ class EditProfile : AppCompatActivity() {
         binding?.toolbarEdit!!.setNavigationOnClickListener {
             onBackPressed()
         }
+
+
         logOutBtn!!.setOnClickListener {
             FirebaseAuth.getInstance().signOut()
         }
@@ -69,6 +77,16 @@ class EditProfile : AppCompatActivity() {
                         name!!.setText(obj!!.name)
                         email!!.setText(obj.email)
                         description!!.setText(obj.description)
+                        val requestOptions = RequestOptions()
+                            .diskCacheStrategy(DiskCacheStrategy.ALL)
+                        image.let {
+                            if (it != null) {
+                                Glide.with(this@EditProfile)
+                                    .load(obj.imageUrl!!.toUri())
+                                    .apply(requestOptions)
+                                    .into(it)
+                            }
+                        }
                         imageUri = obj.imageUrl
                         uid1 = obj.uid.toString()
                         phoneNumber = obj.phNumber
@@ -94,4 +112,14 @@ class EditProfile : AppCompatActivity() {
 
 
     }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+
+        menuInflater.inflate(R.menu.menufor_edit_profile,menu)
+        return true
+
+
+    }
+
+
 }

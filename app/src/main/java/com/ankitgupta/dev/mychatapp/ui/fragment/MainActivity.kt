@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         if (FirebaseAuth.getInstance().currentUser!=null){
             Log.e("auth","${FirebaseAuth.getInstance().currentUser!!.phoneNumber}")
             //  findNavController().navigate(R.id.action_setUpProfile_to_viewPager2)
-            val intent = Intent(this, ViewPager::class.java)
+            val intent = Intent(this, ChatActivityWithUser::class.java)
             startActivity(intent)
             // Toast.makeText(requireContext(),"user is already registered ${auth.currentUser!!.phoneNumber}",Toast.LENGTH_SHORT).show()
         }

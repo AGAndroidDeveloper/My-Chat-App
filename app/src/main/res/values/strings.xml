@@ -39,6 +39,10 @@
     <string name="jai_shree_ram">jai shree Ram</string>
     <string name="title_activity_setting">Setting</string>
     <string name="large_text">
+        <string name="ek_img_content">ExportKit Image</string>
+	<string name="ha_bro_kya_haal_h_kya_kr_rha_ha_string">ha bro kya haal h kya kr rha ha </string>
+	<string name="ankit_bol_rha_hu_bhai_kya_haal_h_string">Ankit  bol rha hu bhai kya haal h </string>
+	<string name="_12_12_string">12:12</string>
         "Material is the metaphor.\n\n"
 
         "A material metaphor is the unifying theory of a rationalized space and a system of motion."
@@ -133,4 +137,11 @@
     <string name="set_background_wallpaper">Set backGround wallpaper</string>
     <string name="todo">TODO</string>
     <string name="edit_profile">Edit Profile</string>
+    <string name="otp_verification11">Otp Verification</string>
+    <string name="we_will_send_you_one_time_password_on_this_number">We Will Send You One Time PassWord on this Number</string>
+    <string name="ankit_bol_rha_hu_bhai_kya_haal_h_string">ankit_bol_rha_hu_bhai_kya_haal_h_string</string>
+    <string name="vector_ek1">vector_ek1</string>
+    <string name="_1">1</string>
+    <string name="hello_you_didn_t_picked_my_call">hello you didn\'t picked my call</string>
+    <string name="check_mark">check mark</string>
 </resources>

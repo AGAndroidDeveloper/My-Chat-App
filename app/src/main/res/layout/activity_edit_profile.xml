@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.fragment.EditProfile"
-    android:background="#3E3757"
-    android:alpha=".85"
+    android:background="@color/black"
+
     >
     <ScrollView
         android:id="@+id/userprofileEdit"
@@ -33,6 +33,7 @@
     app:titleMarginStart="20dp"
     app:navigationIcon="@drawable/baseline_arrow_back_24"
     app:title="Edit Profile"
+    app:menu="@menu/menu121"
     app:titleTextColor="#7AF6E4"/>
 
             <LinearLayout
@@ -44,20 +45,11 @@
                 android:padding="16dp"
 
                 tools:ignore="UselessParent">
-                <TextView
-                    android:id="@+id/welcome"
-                    android:fontFamily="@font/biryani_semibold"
-                    android:layout_width="match_parent"
-                    android:layout_height="53.492657585144dp"
-                    android:layout_gravity="center_horizontal|center"
-                    android:gravity="center"
-                    android:text="Edit Profile"
-                    android:textColor="@color/get_started_color"
-                    android:textSize="31.65sp" />
+
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/profile_imageEdit"
-                    android:layout_width="156dp"
-                    android:layout_height="156dp"
+                    android:layout_width="126dp"
+                    android:layout_height="126dp"
                     android:layout_gravity="center"
                     android:layout_margin="10dp"
                     android:src="@drawable/man"
@@ -73,8 +65,8 @@
                     android:elevation="2dp"
                     android:layout_gravity="center"
 
-                    android:textColorHint="#6B705E"
-                    android:textColor="#C3E85A"
+                    android:textColorHint="#000000"
+                    android:textColor="#000000"
                     android:fontFamily="@font/biryani_semibold"
                     android:hint="@string/enter_your_name"
                     android:inputType="textPersonName"
@@ -88,8 +80,8 @@
                     android:hint="@string/enter_your_email_id"
                     android:inputType="textEmailAddress"
                     android:padding="15dp"
-                    android:textColor="#C3E85A"
-                    android:textColorHint="#6B705E"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/name_background"
                     android:autofillHints="emailAddress"
@@ -103,9 +95,9 @@
                     android:hint="@string/description"
                     android:inputType="textPersonName"
                     android:padding="15dp"
-                    android:textColor="#C3E85A"
+                    android:textColor="#000000"
                     android:elevation="2dp"
-                    android:textColorHint="#6B705E"
+                    android:textColorHint="#000000"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/name_background"
                     android:autofillHints="description" />
@@ -115,29 +107,34 @@
                 <Button
                     android:id="@+id/ankitBtnEdit"
                     android:layout_width="match_parent"
+                    android:layout_marginEnd="20dp"
+
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="0dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="30dp"
 android:elevation="8dp"
                     android:shadowRadius="3"
                     android:text="@string/submit"
                     android:textSize="25sp"
-                    android:textColor="#01251E"
-                    android:layout_gravity="center"
+                    android:textColor="@color/get_started_color"
+                    android:backgroundTint="@color/colorAccent"
+
                     android:gravity="center"
                     android:fontFamily="@font/biryani_semibold"
-                    android:background="@drawable/name_background1"
+
                     />
 
                 <Button
                     android:id="@+id/logOut"
-                    android:layout_width="wrap_content"
+                    android:layout_width="200dp"
                     android:layout_marginTop="16dp"
                     android:text="Log Out"
-                    android:textColor="#01251E"
+                    android:textColor="@color/white"
                     android:fontFamily="@font/biryani_semibold"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
+                    style="@style/Widget.Material3.Button.IconButton.Outlined"
                     android:layout_gravity="end"/>
 
 

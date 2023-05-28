@@ -88,11 +88,7 @@ private var image :de.hdodenhof.circleimageview.CircleImageView? = null
 
 
         }
-//&& userEmail.isNotEmpty() && userEmail.let {
-//                   Patterns.EMAIL_ADDRESS.matcher(
-//                       it
-//                   ).matches()
-//               } && userDescription.isNotEmpty()
+
     }
 
 
@@ -101,7 +97,7 @@ private var image :de.hdodenhof.circleimageview.CircleImageView? = null
         dRef.child(user.uid!!).setValue(user).addOnCompleteListener { taskk ->
             if (taskk.isSuccessful){
                 dialog!!.dismiss()
-                val intent = Intent(context, ViewPager::class.java)
+                val intent = Intent(context, ChatActivityWithUser::class.java)
                  // intent.putExtra(ViewModel.SEND,uid)
                startActivity(intent)
 
